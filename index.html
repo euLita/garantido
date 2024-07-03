@@ -1,0 +1,21 @@
+<script>
+    function createHeartImage() {
+        var img = document.createElement('img');
+        img.src = 'https://i.scdn.co/image/ab67616d0000b2735014aa93f86c4ee115b4a121';
+        img.style.width = '200px';
+        img.style.height = 'auto';
+        return img;
+    }
+
+    function displayHearts(count) {
+        var container = document.getElementById('hearts-container');
+        for (let i = 0; i < count; i++) {
+            container.appendChild(createHeartImage());
+        }
+    }
+
+    window.onload = function() {
+        displayHearts(100);
+    };
+</script>
+<div id="hearts-container"></div>
